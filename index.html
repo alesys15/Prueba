@@ -1,234 +1,60 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Plantilla Pro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-body: #0d1117;
-            --bg-card: #161b22;
-            --border-color: #30363d;
-            --text-main: #c9d1d9;
-            --text-dim: #8b949e;
-            --accent-true: #238636;
-            --accent-false: #da3633;
-            --accent-blue: #58a6ff;
-        }
+---
+layout: default
+---
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+<article class="card">
+    <div class="image-container">
+        <img src="{{ site.data.plantilla.imagen_previa }}" alt="Preview">
+        <span class="ratio-badge">RATIO 1 : 1.5</span>
+    </div>
 
-        /* Contenedor Principal */
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            display: flex;
-            max-width: 850px;
-            width: 100%;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        /* Sección Imagen (Miniatura) */
-        .image-container {
-            flex: 0 0 240px; /* Ancho fijo para mantener el ratio 1:1.5 */
-            background: #21262d;
-            position: relative;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-        
-        .image-container:hover img {
-            opacity: 1;
-        }
-
-        .ratio-badge {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            background: rgba(0,0,0,0.7);
-            padding: 4px 8px;
-            font-size: 10px;
-            border-radius: 4px;
-            font-family: 'Fira Code', monospace;
-        }
-
-        /* Contenido Derecho */
-        .content {
-            flex: 1;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        /* Encabezado de la Tarjeta */
-        .header-top {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px;
-        }
-
-        .info-group b {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .info-group span {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        /* Estilos Lógicos para True/False */
-        .status-badge {
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 700;
-        }
-
-        .true { background: rgba(35, 134, 54, 0.2); color: #3fb950; border: 1px solid var(--accent-true); }
-        .false { background: rgba(218, 54, 51, 0.2); color: #f85149; border: 1px solid var(--accent-false); }
-
-        /* Acordeones (Desplegables) */
-        details {
-            background: #0d1117;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        summary {
-            font-weight: 700;
-            color: var(--accent-blue);
-            outline: none;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        summary::after {
-            content: '▼';
-            font-size: 0.7rem;
-            transition: 0.3s;
-        }
-
-        details[open] summary::after {
-            transform: rotate(180deg);
-        }
-
-        .dropdown-content {
-            padding-top: 15px;
-            font-size: 0.95rem;
-        }
-
-        /* Listado de Campos */
-        .fields-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .fields-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #21262d;
-            font-family: 'Fira Code', monospace;
-            font-size: 0.85rem;
-        }
-
-        .fields-list li:last-child { border: 0; }
-        
-        .field-label { color: var(--accent-blue); font-weight: bold; }
-
-        /* Mobile */
-        @media (max-width: 650px) {
-            .card { flex-direction: column; }
-            .image-container { height: 300px; flex: none; }
-        }
-    </style>
-</head>
-<body>
-
-    <article class="card">
-        <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Vista previa">
-            <span class="ratio-badge">RATIO 1 : 1.5</span>
-        </div>
-
-        <div class="content">
-            <div class="header-top">
-                <div class="info-group">
-                    <b>Nombre</b>
-                    <span>Nexus Prime Layout</span>
-                </div>
-                <div class="info-group">
-                    <b>Versión</b>
-                    <span style="font-family: 'Fira Code';">3.23.1</span>
-                </div>
-                <div class="info-group">
-                    <b>Bootstrap</b>
-                    <span class="status-badge true">TRUE</span>
-                </div>
-                <div class="info-group">
-                    <b>Optimizado</b>
-                    <span>SmartPhone / Desktop</span>
-                </div>
+    <div class="content">
+        <div class="header-top">
+            <div class="info-group">
+                <b>Nombre</b>
+                <span>{{ site.data.plantilla.nombre }}</span>
+            </div>
+            <div class="info-group">
+                <b>Versión</b>
+                <span class="code-font">{{ site.data.plantilla.version }}</span>
+            </div>
+            
+            <div class="info-group">
+                <b>Bootstrap</b>
+                <span class="status-badge {% if site.data.plantilla.bootstrap %}true{% else %}false{% endif %}">
+                    {{ site.data.plantilla.bootstrap | upcase }}
+                </span>
             </div>
 
-            <details open>
-                <summary>CAMPOS DISPONIBLES</summary>
-                <div class="dropdown-content">
-                    <ul class="fields-list">
-                        <li><span class="field-label">Título:</span> Título Principal de la web</li>
-                        <li><span class="field-label">Banner Superior:</span> Imagen formato 1:4</li>
-                        <li><span class="field-label">Imagen Inferior:</span> Imagen formato 1:1</li>
-                    </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>DESCRIPCIÓN DEL PROYECTO</summary>
-                <div class="dropdown-content">
-                    <p style="color: var(--text-dim); line-height: 1.5;">
-                        Esta es una plantilla de alto rendimiento diseñada específicamente para <b>GitHub Pages</b>. 
-                        Incluye soporte nativo para renderizado rápido y estilos condicionales basados en el estado del framework.
-                    </p>
-                </div>
-            </details>
-
-            <div class="info-group" style="margin-top: auto;">
-                <b>Integridad de Datos</b>
-                <span class="status-badge false">OFFLINE SYNC: FALSE</span>
+            <div class="info-group">
+                <b>Optimizado</b>
+                <span>{{ site.data.plantilla.optimizado }}</span>
             </div>
         </div>
-    </article>
 
-</body>
-</html>
+        <details open>
+            <summary>CAMPOS DISPONIBLES</summary>
+            <div class="dropdown-content">
+                <ul class="fields-list">
+                    {% for campo in site.data.plantilla.campos %}
+                    <li><span class="field-label">{{ campo.etiqueta }}:</span> {{ campo.valor }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </details>
+
+        <details>
+            <summary>DESCRIPCIÓN</summary>
+            <div class="dropdown-content">
+                <p>{{ site.data.plantilla.descripcion }}</p>
+            </div>
+        </details>
+
+        <div class="info-group" style="margin-top: auto;">
+            <b>Integridad de Datos</b>
+            <span class="status-badge {% if site.data.plantilla.sync_offline %}true{% else %}false{% endif %}">
+                OFFLINE SYNC: {{ site.data.plantilla.sync_offline | upcase }}
+            </span>
+        </div>
+    </div>
+</article>

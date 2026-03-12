@@ -1,0 +1,14 @@
+nombre: "Nexus Prime Layout"
+version: "3.23.1"
+bootstrap: true
+optimizado: "SmartPhone / Desktop"
+imagen_previa: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400"
+campos:
+  - etiqueta: "Título"
+    valor: "Título Principal de la web"
+  - etiqueta: "Banner Superior"
+    valor: "Imagen formato 1:4"
+  - etiqueta: "Imagen Inferior"
+    valor: "Imagen formato 1:1"
+descripcion: "Esta es una plantilla de alto rendimiento diseñada para Jekyll y GitHub Pages."
+sync_offline: false

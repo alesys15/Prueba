@@ -1,4 +1,4 @@
-title: Dashboard de Plantilla Pro
+title: "Dashboard de Plantilla Pro"
 description: "Esta es una plantilla de alto rendimiento diseñada para Jekyll y GitHub Pages."
-url: ""
-baseurl: ""
+baseurl: "/Prueba" # Es el nombre de tu repositorio
+url: "https://aleja.github.io" # Tu url de GitHub Pages

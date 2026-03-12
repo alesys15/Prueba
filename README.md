@@ -1,5 +1,4 @@
 # Prueba
 
-code```
-sh run.sh
 ```
+sh run.sh

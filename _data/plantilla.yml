@@ -1,56 +1,59 @@
-nombre: "Nexus Prime Layout"
-version: "3.23.1"
-bootstrap: true
-optimizado: "SmartPhone / Desktop"
-imagen_previa: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400"
-campos:
-  - etiqueta: "Título"
-    valor: "Título Principal de la web"
-  - etiqueta: "Banner Superior"
-    valor: "Imagen formato 1:4"
-  - etiqueta: "Imagen Inferior"
-    valor: "Imagen formato 1:1"
-descripcion: "Esta es una plantilla de alto rendimiento diseñada para Jekyll y GitHub Pages."
-sync_offline: false
-nombre: "Aura Minimal"
-version: "1.0.5"
-bootstrap: false
-optimizado: "Retina Display / Mobile First"
-imagen_previa: "https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?w=400"
-campos:
-  - etiqueta: "Nombre del Artista"
-    valor: "Tu Nombre Aquí"
-  - etiqueta: "Color de Acento"
-    valor: "#E63946"
-  - etiqueta: "Galería Principal"
-    valor: "Grid de imágenes 3x3"
-descripcion: "Una plantilla ultra ligera enfocada en la tipografía y el espacio en blanco para portafolios de fotografía."
-sync_offline: true
-nombre: "Velocity Store"
-version: "2.1.0"
-bootstrap: true
-optimizado: "Multi-browser / Tablet"
-imagen_previa: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=400"
-campos:
-  - etiqueta: "Moneda"
-    valor: "USD"
-  - etiqueta: "Banner de Rebajas"
-    valor: "Texto promocional superior"
-  - etiqueta: "Logo"
-    valor: "SVG Vectorial"
-descripcion: "Layout optimizado para conversión con integración directa a sistemas de pago estáticos."
-sync_offline: false
-nombre: "CyberDoc"
-version: "4.0.2"
-bootstrap: true
-optimizado: "Desktop UltraWide"
-imagen_previa: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400"
-campos:
-  - etiqueta: "Lenguaje Principal"
-    valor: "Markdown / Liquid"
-  - etiqueta: "Código de Seguimiento"
-    valor: "ID de Analytics"
-  - etiqueta: "Avatar del Autor"
-    valor: "Imagen circular 1:1"
-descripcion: "Tema oscuro de alto contraste con resaltado de sintaxis integrado para documentación técnica."
-sync_offline: true
+- nombre: "Nexus Prime Layout"
+  version: "3.23.1"
+  bootstrap: true
+  optimizado: "SmartPhone / Desktop"
+  imagen_previa: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400"
+  campos:
+    - etiqueta: "Título"
+      valor: "Título Principal de la web"
+    - etiqueta: "Banner Superior"
+      valor: "Imagen formato 1:4"
+    - etiqueta: "Imagen Inferior"
+      valor: "Imagen formato 1:1"
+  descripcion: "Esta es una plantilla de alto rendimiento diseñada para Jekyll y GitHub Pages."
+  sync_offline: false
+
+- nombre: "Aura Minimal"
+  version: "1.0.5"
+  bootstrap: false
+  optimizado: "Retina Display / Mobile First"
+  imagen_previa: "https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?w=400"
+  campos:
+    - etiqueta: "Nombre del Artista"
+      valor: "Tu Nombre Aquí"
+    - etiqueta: "Color de Acento"
+      valor: "#E63946"
+    - etiqueta: "Galería Principal"
+      valor: "Grid de imágenes 3x3"
+  descripcion: "Una plantilla ultra ligera enfocada en la tipografía y el espacio en blanco para portafolios de fotografía."
+  sync_offline: true
+
+- nombre: "Velocity Store"
+  version: "2.1.0"
+  bootstrap: true
+  optimizado: "Multi-browser / Tablet"
+  imagen_previa: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=400"
+  campos:
+    - etiqueta: "Moneda"
+      valor: "USD"
+    - etiqueta: "Banner de Rebajas"
+      valor: "Texto promocional superior"
+    - etiqueta: "Logo"
+      valor: "SVG Vectorial"
+  descripcion: "Layout optimizado para conversión con integración directa a sistemas de pago estáticos."
+  sync_offline: false
+
+- nombre: "CyberDoc"
+  version: "4.0.2"
+  bootstrap: true
+  optimizado: "Desktop UltraWide"
+  imagen_previa: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400"
+  campos:
+    - etiqueta: "Lenguaje Principal"
+      valor: "Markdown / Liquid"
+    - etiqueta: "Código de Seguimiento"
+      valor: "ID de Analytics"
+    - etiqueta: "Avatar del Autor"
+      valor: "Imagen circular 1:1"
+  descripcion: "Tema oscuro de alto contraste con resaltado de sintaxis integrado para documentación técnica."
+  sync_offline: true

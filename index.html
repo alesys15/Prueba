@@ -2,9 +2,10 @@
 layout: default
 ---
 
-<article class="card">
+{% for plantilla in site.data.plantilla %}
+<article class="card" style="margin-bottom: 30px;">
     <div class="image-container">
-        <img src="{{ site.data.plantilla.imagen_previa }}" alt="Preview">
+        <img src="{{ plantilla.imagen_previa }}" alt="Preview">
         <span class="ratio-badge">RATIO 1 : 1.5</span>
     </div>
 
@@ -12,23 +13,23 @@ layout: default
         <div class="header-top">
             <div class="info-group">
                 <b>Nombre</b>
-                <span>{{ site.data.plantilla.nombre }}</span>
+                <span>{{ plantilla.nombre }}</span>
             </div>
             <div class="info-group">
                 <b>Versión</b>
-                <span class="code-font">{{ site.data.plantilla.version }}</span>
+                <span class="code-font">{{ plantilla.version }}</span>
             </div>
             
             <div class="info-group">
                 <b>Bootstrap</b>
-                <span class="status-badge {% if site.data.plantilla.bootstrap %}true{% else %}false{% endif %}">
-                    {{ site.data.plantilla.bootstrap | upcase }}
+                <span class="status-badge {% if plantilla.bootstrap %}true{% else %}false{% endif %}">
+                    {{ plantilla.bootstrap | upcase }}
                 </span>
             </div>
 
             <div class="info-group">
                 <b>Optimizado</b>
-                <span>{{ site.data.plantilla.optimizado }}</span>
+                <span>{{ plantilla.optimizado }}</span>
             </div>
         </div>
 
@@ -36,7 +37,7 @@ layout: default
             <summary>CAMPOS DISPONIBLES</summary>
             <div class="dropdown-content">
                 <ul class="fields-list">
-                    {% for campo in site.data.plantilla.campos %}
+                    {% for campo in plantilla.campos %}
                     <li><span class="field-label">{{ campo.etiqueta }}:</span> {{ campo.valor }}</li>
                     {% endfor %}
                 </ul>
@@ -46,15 +47,16 @@ layout: default
         <details>
             <summary>DESCRIPCIÓN</summary>
             <div class="dropdown-content">
-                <p>{{ site.data.plantilla.descripcion }}</p>
+                <p>{{ plantilla.descripcion }}</p>
             </div>
         </details>
 
         <div class="info-group" style="margin-top: auto;">
             <b>Integridad de Datos</b>
-            <span class="status-badge {% if site.data.plantilla.sync_offline %}true{% else %}false{% endif %}">
-                OFFLINE SYNC: {{ site.data.plantilla.sync_offline | upcase }}
+            <span class="status-badge {% if plantilla.sync_offline %}true{% else %}false{% endif %}">
+                OFFLINE SYNC: {{ plantilla.sync_offline | upcase }}
             </span>
         </div>
     </div>
 </article>
+{% endfor %}

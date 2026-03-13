@@ -1,0 +1,21 @@
+{
+  "name": "Nombre del Proyecto",
+  "description": "Breve descripción del constructor web",
+  "bosstra": true,
+  "version": "1.0.0",
+  "thumbnail_image": "path/to/server/image.jpg",
+  "fields": [
+    {
+      "title": "Título del Campo 1",
+      "type": "short_text",
+      "main_image": "url_imagen_principal_1",
+      "ratio": "1x4"
+    },
+    {
+      "title": "Título del Campo 2",
+      "type": "long_text",
+      "main_image": "url_imagen_principal_2",
+      "ratio": "1x4"
+    }
+  ]
+}
